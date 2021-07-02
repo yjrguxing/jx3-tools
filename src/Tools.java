@@ -17,13 +17,15 @@ public class Tools {
      * @Desc : 通过需要的属性计算出 原始伤害
      */
     static Integer primitiveDamage(Integer baseDamage,Integer damage,Double DamageCoefficient,Double weaponDamage,Double weaponDamageCoefficient){
-        Integer result = 0;
-        result = baseDamage + (int)Math.floor(damage * DamageCoefficient) + (int)Math.floor(weaponDamage * weaponDamageCoefficient);
+        Integer result;
+        result = (int)Math.floor(baseDamage + (damage * DamageCoefficient) + (weaponDamage * weaponDamageCoefficient));
         return result;
     }
 
-    static Integer benchmarkDamage(Integer primitiveDamage,){
-        Integer result = 0;
+
+    static Integer benchmarkDamage(Integer primitiveDamage,Double charge,Double MagicOvercome,Double defense){
+        Integer result = null;
+        return result;
     }
 
 
@@ -36,7 +38,7 @@ public class Tools {
      */
     @Deprecated
     static Integer magic(Double anyNumber){
-        Integer magicNunmber = 0;
+        Integer magicNunmber;
         magicNunmber = (int)Math.floor(1024 * anyNumber);
         return magicNunmber;
     }
