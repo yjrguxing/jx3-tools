@@ -21,10 +21,16 @@ public class Tools {
         result = (int)Math.floor(baseDamage + (damage * DamageCoefficient) + (weaponDamage * weaponDamageCoefficient));
         return result;
     }
-
-
+    /**
+     * @author : psyduck
+     * @Date : 2021/7/5 11:43
+     * @Param : [primitiveDamage 原始伤害, charge 破防百分比, MagicOvercome 无双百分比, defense 目标防御]
+     * @Return : java.lang.Integer
+     * @Desc : 通过需要的属性计算出 基准伤害
+     */
     static Integer benchmarkDamage(Integer primitiveDamage,Double charge,Double MagicOvercome,Double defense){
-        Integer result = null;
+        Integer result;
+        result = (int)Math.floor(primitiveDamage * (1+charge) * (1+MagicOvercome) * (1-defense));
         return result;
     }
 
